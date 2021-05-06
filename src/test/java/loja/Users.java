@@ -15,6 +15,14 @@ public class Users {
         return new String(Files.readAllBytes(Paths.get(caminhoJson)));
     }
 
+    @Test
+    public void ordemDaExecucao() throws IOException {
+        incluirUsuario();
+        consultarUsuario();
+        alterarUsuario();
+        excluirUsuario();
+    }
+
     @Test // POST - Incluir
     public void incluirUsuario() throws IOException {
         String jsonBody = lerJson("data/user.json");
